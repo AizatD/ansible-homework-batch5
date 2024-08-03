@@ -7,10 +7,13 @@
       name: unzip
       update_cache: yes
   
-  - name: Install the latest version mariadb and mariadb-server
-    ansible.builtin.package:
-      name: 
-         - mariadb
-         - mariadb-server
+  - name: Install MariaDB
+    apt:
+      name: mariadb-server
+      state: present
+  
+  - name: Start and enable MariaDB
+    service:
+      name: mariadb
       state: started
       enabled: yes
