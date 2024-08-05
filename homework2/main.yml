@@ -17,6 +17,6 @@
         groups: "{{ item.groups }}"
         state: present
       loop:
-      - { name: "<galina>", groups: "devops" }
+      - { name: "aizat", groups: "devops" }
       - { name: "tim", groups: "qa" }
       - { name: "ann", groups: "qa" }
